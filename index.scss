@@ -3,69 +3,56 @@ $SoftRed: hsl(0, 94%, 66%);
 $GrayishBlue: hsl(229, 8%, 60%);
 $VeryDarkBlue: hsl(229, 31%, 21%);
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box; 
-    font-family: rubik;
-    font-size:18px;
-}
-h3{
-    font-size:1.2rem;
-    font-weight:bolder;
-}
-p{
-    font-size: 0.8rem;
-    line-height: 25px;
-    color:$GrayishBlue;
-    font-weight: bold;
-}
-@font-face{
-    font-family: rubik;
-    src: url(./font/Rubik-Regular.ttf);
-}
 
-@media only screen and (max-width:578px){
+// h3{
+//     font-size:1.2rem;
+//     font-weight:bolder;
+// }
+// p{
+//     font-size: 0.8rem;
+//     line-height: 25px;
+//     color:$GrayishBlue;
+//     font-weight: bold;
+// }
+// @font-face{
+//     font-family: rubik;
+//     src: url(./font/Rubik-Regular.ttf);
+// }
+
+@media only screen and (min-width:579px){
     header{
         width: 100%;
         height:auto;
         // background: yellow;
-        padding: 5%;
+        padding: 1% 5%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         .logo{
             z-index:3;
+            width:auto;
+            // background: blue;
         }
         ul{
-            position: absolute;
-            top: 0px;
-            right: 50%;
-            transform: translate(50%,0);
-            opacity: 0.95;
-            display:none;
-            flex-direction: column;
+            display:flex;
             align-items: center;
-            // justify-content: space-between;
-            padding: 80px 0px 0px;
-            transition: display 3s ease .5s;
-            background: $VeryDarkBlue;
-            width: 100%;
-            height: 100%;
+            justify-content: center;
+            // background: $VeryDarkBlue;
+            width: 380px;
             z-index:2;
+            
             li{
                 text-align: center;
-                padding: 18px 0px;
+                padding:  3%;
                 list-style: none;
-                border-top: 1px solid $GrayishBlue;
-                border-bottom: 1px solid $GrayishBlue;
-                width: 80%;
-                // opacity: 0.3;
+
                 a{
                     text-decoration: none;
-                    color: white;
+                    color: black;
+                    font-weight:700;
                     text-transform: uppercase;
-                    letter-spacing: 1.4px;
+                    letter-spacing: 1px;
+                    font-size:80%;
                     &:hover{
                         color:$SoftRed;
                     }
@@ -73,54 +60,34 @@ p{
                 }
             }
             .social-media{
-                margin:40% 0px 40px;
-                // width: 30%;
-                img{
-                    margin:10px 20px;
-                }
-                // background:yellow;
+                display:none; 
             }
         }
-        ul.open{
-            display:flex;
-        }
+        
         button{
-            padding: 10px;
-            width: 80%;
-            background: $VeryDarkBlue;
-            border: 2px solid white;
+            padding: 10px 20px;
+            width: auto;
+            background: $SoftRed;
+            // border: 2px solid white;
             border-radius: 9px;
             color:white;
-            margin-top: 20px;
+            margin-left: 10px;
             text-transform: uppercase;
             letter-spacing: 1.4px;
+            font-size:.7rem;
+            font-weight:600;
+            border:none;
             cursor: pointer;
             &:hover{
                 border: $SoftRed 2px solid;
                 color:$SoftRed;
+                background:none;
             }
             
         }
         .menu{
-            position: absolute;
-            top:25px;
-            right: 5%;
-            z-index:3;
-            
-            cursor:pointer;
-            #close{
-                display: none;
-                // filter:invert(0) saturate(20%) brightness(120%);
-                &.open{
-                    display: flex;
-                }
-            }
-            #normal{
-                display:flex;
-                &.open{
-                    display: none;
-                }
-            }
+            display:none;
+          
         }
 
     }
@@ -135,53 +102,63 @@ p{
         margin:20px auto;
         .first{
             position: relative;
-            // background: blue;
+            background: blue;
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: row;
+
             div[blue]{
                 margin-top: 65px;
+                // background:black;
                 background: $SoftBlue;
                 border-radius: 0px 0px 0px 30%;
-                width: 80%;
+                max-width: 50%;
                 height: 180px;
                 margin-left: auto;
                 img{
-                    position:absolute;
-                    top: 0px;
-                    left:0px;
+                    position:relative;
+                    top: -70px;
+                    right:20%;
                     // border:2px black solid;
-                    width: 90%;
+                    max-width: 400px ;
                     height: auto;
                 }
             }
-            h1{
-                font-size: 1.6rem;
-                text-align:center;
-                padding: 30px 30px 20px;
-            }
-            p{
-                text-align:center;
-                width: 90%;
-                margin:0px auto 20px;
-            }
-            div[butt]{
-                display: flex;
-                justify-content: center;
-                margin-bottom: 60px;
-                button{
-                    padding: 10px 15px;
-                    border-radius: 7px;
-                    margin:10px 10px;
-                    cursor:pointer;
-                    border:none;
-                    background: $SoftBlue;
-                    color: white;
-                    font-size: .8rem;
-                    
-                    
-
+            [b]{
+                background:brown;
+                width:70%;
+                h1{
+                    font-size: 1.6rem;
+                    text-align:align;
+                    padding: 30px 5% 20px;
+                }
+                p{
+                    text-align:left;
+                    width: 400px;
+                    max-width:70%;
+                    margin:0px 5% 20px;
+                }
+                div[butt]{
+                    display: flex;
+                    // justify-content: flex-start;
+                    margin-left:2%;
+                    margin-bottom: 60px;
+                    button{
+                        padding: 10px 15px;
+                        border-radius: 7px;
+                        margin:10px 10px;
+                        cursor:pointer;
+                        border:none;
+                        background: $SoftBlue;
+                        color: white;
+                        font-size: .8rem;
+                        
+                        
+    
+                    }
                 }
             }
+           
+          
         }
         .second{
             display:flex;
@@ -193,9 +170,13 @@ p{
                 font-weight:bolder;
                 margin: 60px 0px 15px;
             }
+            p{
+                max-width: 70%;
+                margin:0 auto;
+            }
             ul{
                 margin: 30px 0px 70px;
-                // background:blue;
+                display:inline-flex;
                 // width:300px;
                 hr{
                     background:$SoftBlue;
@@ -203,9 +184,7 @@ p{
                 }
                 li{
                     list-style: none;
-                    
-                    
-                    margin:20px 0px;
+                    margin:20px 30px;
                     
                     a{
                         text-decoration: none;
@@ -227,12 +206,14 @@ p{
             margin-bottom: 450px;
             .tab{
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 position: relative;
-                // background:blue;
+                width:90%;
+                background:blue;
                 text-align: center;
                 position: absolute;
                 visibility: visible;
+                justify-content: space-around;
                     transition: visibility 3s .2s;
                     &.open{
                         visibility: hidden;
@@ -244,33 +225,43 @@ p{
                     background: $SoftBlue;
                     margin-top:40px;
                     border-radius: 0px 0px 30% 0px;
-                    
                     img{
-                        position:absolute;
-                        top:0px;
+                        position:relative;
+                        top:-40px;
                         left:30px;
                         z-index: 4;
-                        width:80%;
-                        height: auto;
-                        // margin:10px 20px 0px 20px;
+                        width:90%;
                     }
                 }
                 div[tabtext]{
                     margin-bottom: 40px;
+                    margin:15px 20px 40px;
                     margin-top: 15px;
-                    width:90%;
+                    width:60%;
+                    max-width: 600px;
                     z-index:10;
+                    text-align:left;
+                    
                     h3{
                         font-size: 1.2rem;
                         margin:20px 0px ;
+                        
                     }
                     button{
-                        display:none;
+                        display:flex;
+                        padding: 10px 15px;
+                        border-radius: 7px;
+                        margin:20px 0px 0;
+                        cursor:pointer;
+                        border:none;
+                        background: $SoftBlue;
+                        color: white;
+                        font-size: .8rem;
                     }
                 }
                 &.tab2{
                     display:flex;
-                    visibility: hidden;
+                    visibility: visible;
                     background:white;
                     z-index: 10;
                     border:2px solid red;
@@ -281,8 +272,8 @@ p{
                     div[tab]{
                         max-width:66%;
                     img{
-                        position:absolute;
-                        top:0px;
+                        position:relative;
+                        top:-40px;
                         left:10%;
                         width:80%;
                         height:auto;
@@ -293,7 +284,7 @@ p{
                 &.tab3{
                     display: flex;
                     visibility: visible;
-                    background:white;
+                    background:yellow;
                     z-index: 11;
                     transition: visibility 5s .2s;
                     &.open{
@@ -302,8 +293,8 @@ p{
                     div[tab]{
                         max-width:66%;
                         img{
-                            position:absolute;
-                            top:0px;
+                            position:relative;
+                            top:-40px;
                             left:10%;
                             z-index: 4;
                             width:80%;
@@ -316,13 +307,36 @@ p{
         }
         .fourth{
             display:flex;
+            // grid-template-columns: auto;
             flex-direction:column;
             text-align: center;
+            background: black;
+            
             div{
                 display: flex;
                 flex-direction:column;
                 align-items: center;
                 
+                
+            }
+            [c]{
+                grid-column: 1/5;
+            }
+            [f]{
+                background:brown;
+                display: flex;
+                height:350px;
+                flex-direction: row;
+                justify-content: space-around;
+                // align-items:center;
+                .chrome{
+                  align-self:flex-start; 
+                  background:green; 
+                }
+                .opera{
+                    background:black; 
+                    align-self:flex-end; 
+                  }
             }
             p[i]{
                 width:70%;
@@ -336,7 +350,7 @@ p{
                 img{
                     width:40%;
                     height: auto;
-                    margin:60px auto 20px;
+                    margin:30px auto 20px;
                 }
                 .bold{
                     font-weight:700;
@@ -403,7 +417,7 @@ p{
             }
             button{
                 width:auto;
-                margin:80px auto;
+                margin:60px auto;
                 padding:10px 20px;
                 background: $SoftBlue;
                 color:white;
@@ -450,7 +464,9 @@ p{
             }
             form{
                 display:flex;
-                flex-direction: column;
+                flex-direction: row;
+                align-items:center;
+                justify-content: center;
                 width:80%;
                 margin:0px auto 20px;
                 input{
@@ -466,11 +482,13 @@ p{
                 button{
                     height:50px;
                     border-radius:5px;
+                    padding: 0 20px;
                     border:none;
                     font-weight:bold;
                     font-size:.9rem;
                     color:white;
                     background:$SoftRed;
+                    margin-left:40px;
                     
                     cursor:pointer;
                     &:hover{
@@ -486,18 +504,19 @@ p{
             background:$VeryDarkBlue;
             width: 100%;
             display: flex;
-            flex-direction:column;
+            flex-direction:row;
             align-items:center;
-            height:300px;
+            height:80px;
             padding:5%;
             justify-content: space-between;
             img[z]{
                 filter:invert(1)hue-rotate(170deg)  brightness(100%) ;
             }
             ul{
+                display:inline-flex;
                 li{
                     list-style: none;
-                    margin: 30px auto;
+                    margin: 30px 10px;
                     text-align: center;
                     a{
                         text-decoration: none;
