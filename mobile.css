@@ -63,8 +63,8 @@ p {
     width: 100%;
     visibility: hidden;
     padding: 80px 0px 0px;
-    -webkit-transition: all 1s ease 0.5s;
-    transition: all 1s ease 0.5s;
+    -webkit-transition: all .5s ease 0.1s;
+    transition: all .5s ease 0.1s;
     background: none;
     z-index: -2;
   }
@@ -128,8 +128,8 @@ p {
     display: -ms-flexbox;
     display: flex;
     visibility: hidden;
-    -webkit-transition: all .5s ease .9s;
-    transition: all .5s ease .9s;
+    -webkit-transition: all .3s ease .1s;
+    transition: all .3s ease .1s;
     margin: -16px 0;
   }
   header .menu #close.open {

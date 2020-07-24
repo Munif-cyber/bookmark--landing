@@ -56,7 +56,7 @@ p{
             visibility:hidden;
             // justify-content: space-between;
             padding: 80px 0px 0px;
-            transition: all 1s ease 0.5s;
+            transition: all .5s ease 0.1s;
             background: none;
             
             
@@ -124,7 +124,7 @@ p{
             #close{
                 display: flex;
                 visibility:hidden;
-                transition:all .5s ease .9s;
+                transition:all .3s ease .1s;
                 margin:-16px 0;
                 // filter:invert(0) saturate(20%) brightness(120%);
                 &.open{
