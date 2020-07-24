@@ -49,7 +49,9 @@ p {
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
     opacity: 0.95;
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -57,13 +59,14 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 80px 0px 0px;
-    -webkit-transition: display 3s ease .5s;
-    transition: display 3s ease .5s;
-    background: #252b46;
+    height: 0px;
     width: 100%;
-    height: 100%;
-    z-index: 2;
+    visibility: hidden;
+    padding: 80px 0px 0px;
+    -webkit-transition: all 1s ease 0.5s;
+    transition: all 1s ease 0.5s;
+    background: none;
+    z-index: -2;
   }
   header ul li {
     text-align: center;
@@ -92,11 +95,15 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 100%;
+    z-index: 2;
+    background: #252b46;
+    visibility: visible;
   }
   header button {
     padding: 10px;
     width: 80%;
-    background: #252b46;
+    background: none;
     border: 2px solid white;
     border-radius: 9px;
     color: white;
@@ -117,20 +124,33 @@ p {
     cursor: pointer;
   }
   header .menu #close {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+    -webkit-transition: all .5s ease .9s;
+    transition: all .5s ease .9s;
+    margin: -16px 0;
   }
   header .menu #close.open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    visibility: visible;
   }
   header .menu #normal {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    visibility: visible;
+    -webkit-transition: all .5s ease .9s;
+    transition: all .5s ease .9s;
   }
   header .menu #normal.open {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
   }
   main {
     display: -ms-grid;
@@ -197,6 +217,10 @@ p {
     background: #5368df;
     color: white;
     font-size: .8rem;
+  }
+  main .first div[butt] button:hover {
+    border: #fa5757 2px solid;
+    color: #fa5757;
   }
   main .second {
     display: -webkit-box;
@@ -393,6 +417,10 @@ p {
     background: #5368df;
     border-radius: 6px;
     width: auto;
+  }
+  main .fourth figure button:hover {
+    border: #fa5757 2px solid;
+    color: #fa5757;
   }
   main .fifth {
     display: -webkit-box;

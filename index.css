@@ -85,7 +85,6 @@
   }
   main .first {
     position: relative;
-    background: blue;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -110,7 +109,6 @@
     height: auto;
   }
   main .first [b] {
-    background: brown;
     width: 70%;
   }
   main .first [b] h1 {
@@ -140,6 +138,11 @@
     background: #5368df;
     color: white;
     font-size: .8rem;
+  }
+  main .first [b] div[butt] button:hover {
+    border: #fa5757 2px solid;
+    color: #fa5757;
+    background: none;
   }
   main .second {
     display: -webkit-box;
@@ -191,7 +194,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 450px;
+    margin-bottom: 480px;
   }
   main .three .tab {
     display: -webkit-box;
@@ -203,7 +206,6 @@
             flex-direction: row;
     position: relative;
     width: 90%;
-    background: blue;
     text-align: center;
     position: absolute;
     visibility: visible;
@@ -255,14 +257,18 @@
     color: white;
     font-size: .8rem;
   }
+  main .three .tab div[tabtext] button:hover {
+    border: #fa5757 2px solid;
+    color: #fa5757;
+    background: none;
+  }
   main .three .tab.tab2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    visibility: visible;
+    visibility: hidden;
     background: white;
     z-index: 10;
-    border: 2px solid red;
     -webkit-transition: visibility 3s .2s;
     transition: visibility 3s .2s;
   }
@@ -283,8 +289,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    visibility: visible;
-    background: yellow;
+    visibility: hidden;
     z-index: 11;
     -webkit-transition: visibility 5s .2s;
     transition: visibility 5s .2s;
@@ -312,7 +317,6 @@
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    background: black;
   }
   main .fourth div {
     display: -webkit-box;
@@ -332,7 +336,6 @@
     grid-column: 1/5;
   }
   main .fourth [f] {
-    background: brown;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -347,10 +350,8 @@
   main .fourth [f] .chrome {
     -ms-flex-item-align: start;
         align-self: flex-start;
-    background: green;
   }
   main .fourth [f] .opera {
-    background: black;
     -ms-flex-item-align: end;
         align-self: flex-end;
   }
@@ -388,6 +389,11 @@
     background: #5368df;
     border-radius: 6px;
     width: auto;
+  }
+  main .fourth figure button:hover {
+    border: #fa5757 2px solid;
+    color: #fa5757;
+    background: none;
   }
   main .fifth {
     display: -webkit-box;
@@ -538,7 +544,7 @@
     cursor: pointer;
   }
   footer div[f] form button:hover {
-    background: none;
+    background: white;
     border: 3px solid #fa5757;
     color: #fa5757;
   }
@@ -555,11 +561,11 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 80px;
+    height: 30px;
     padding: 5%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   footer .last img[z] {
     -webkit-filter: invert(1) hue-rotate(170deg) brightness(100%);
@@ -569,6 +575,7 @@
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    margin-left: 20px;
   }
   footer .last ul li {
     list-style: none;
@@ -583,6 +590,10 @@
   }
   footer .last ul li a:visited, footer .last ul li a:hover, footer .last ul li a:active {
     color: #fa5757;
+  }
+  footer .last .social-media {
+    position: absolute;
+    right: 5%;
   }
   footer .last .social-media img {
     margin: 0px 10px;

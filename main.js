@@ -6,7 +6,6 @@ const ul = document.querySelector("header ul");
 const arrow = document.querySelectorAll(".arro");
 // const ar = document.querySelector(".arro");
 // const answer = document.querySelector(".answer");
-
 arrow.forEach(function (butt){
     butt.addEventListener("click", function(e){
         butt.classList.toggle("open");
@@ -25,8 +24,6 @@ arrow.forEach(function (butt){
         // });
                        
     });
-    
-
     // ar.classList.toggle("open");
 });
 
@@ -50,10 +47,10 @@ arrow.forEach(function (butt){
 // easy.addEventListener("click", function(){
 //     tab.classList.toggle("open");
 // });
-
 menu.addEventListener("click", function(){
 ul.classList.toggle("open");
 close.classList.toggle("open");
 normal.classList.toggle("open");
 
 });
+// const clink= document.querySelectorAll("#clink");

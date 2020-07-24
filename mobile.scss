@@ -20,6 +20,11 @@ p{
     color:$GrayishBlue;
     font-weight: bold;
 }
+// body{
+//     background:white;
+//     width:100%;
+//     height:auto;
+// }
 @font-face{
     font-family: rubik;
     src: url(./font/Rubik-Regular.ttf);
@@ -43,16 +48,20 @@ p{
             right: 50%;
             transform: translate(50%,0);
             opacity: 0.95;
-            display:none;
+            display:flex;
             flex-direction: column;
             align-items: center;
+            height: 0px;
+            width: 100%;
+            visibility:hidden;
             // justify-content: space-between;
             padding: 80px 0px 0px;
-            transition: display 3s ease .5s;
-            background: $VeryDarkBlue;
-            width: 100%;
-            height: 100%;
-            z-index:2;
+            transition: all 1s ease 0.5s;
+            background: none;
+            
+            
+            z-index:-2;
+            // transition: display 2s ease .5s;
             li{
                 text-align: center;
                 padding: 18px 0px;
@@ -83,11 +92,16 @@ p{
         }
         ul.open{
             display:flex;
+            height: 100%;
+            z-index:2;
+            background: $VeryDarkBlue;
+            visibility:visible;
+            
         }
         button{
             padding: 10px;
             width: 80%;
-            background: $VeryDarkBlue;
+            background: none;
             border: 2px solid white;
             border-radius: 9px;
             color:white;
@@ -106,19 +120,25 @@ p{
             top:25px;
             right: 5%;
             z-index:3;
-            
             cursor:pointer;
             #close{
-                display: none;
+                display: flex;
+                visibility:hidden;
+                transition:all .5s ease .9s;
+                margin:-16px 0;
                 // filter:invert(0) saturate(20%) brightness(120%);
                 &.open{
                     display: flex;
+                    visibility: visible;
                 }
             }
             #normal{
                 display:flex;
+                visibility:visible;
+                transition:all .5s ease .9s;
                 &.open{
-                    display: none;
+                    display: flex;
+                    visibility: hidden;
                 }
             }
         }
@@ -177,9 +197,10 @@ p{
                     background: $SoftBlue;
                     color: white;
                     font-size: .8rem;
-                    
-                    
-
+                    &:hover{
+                        border: $SoftRed 2px solid;
+                        color:$SoftRed;
+                    }
                 }
             }
         }
@@ -350,6 +371,10 @@ p{
                     background:$SoftBlue;
                     border-radius:6px;
                     width:auto;
+                    &:hover{
+                        border: $SoftRed 2px solid;
+                        color:$SoftRed;
+                    }
                 }
                 
                 
